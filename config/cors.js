@@ -16,7 +16,7 @@ module.exports = {
   | Function - Receives the current origin and should return one of the above values.
   |
   */
-  origin: ['http://www.bossacriativa.art.br', 'https://bossa.herokuapp.com'],
+  origin: ['https://bossa.herokuapp.com'],
 
   /*
   |--------------------------------------------------------------------------
