@@ -31,6 +31,7 @@ Route.get('/lastEvents', 'EventController.show')
 
 Route.post('/sessions', 'SessionController.store')
 
+Route.delete('/lesson/:id', 'LessonController.destroy')
 Route.post('/lessons/:id', 'LessonController.store')
 Route.get('/lastLessons', 'LessonController.show')
 Route.get('/lessons', 'LessonController.index')

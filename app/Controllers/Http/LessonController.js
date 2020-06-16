@@ -30,6 +30,12 @@ class LessonController {
        
        return await lessons.paginate(page ? page : 1, 8)
    }
+   
+   async destroy ({ params }){
+    const lesson = await Lesson.findOrFail(params.id)
+    
+    return lesson.delete()
+}
 }
 
 module.exports = LessonController
