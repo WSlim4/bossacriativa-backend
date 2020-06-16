@@ -3,21 +3,16 @@ const Course = use('App/Models/Course')
 const Database = use('Database')
 
 class CourseController {
-    async store({ request, auth }){
-        const user = await auth.getUser()
-        
+    async store({ request }){
+
         const data = request.all()
         const course = Course.create(data)
         return course
     }
-    async edit({ request, params, response, auth }){
+    async edit({ request, params, response }){
         const { type, name, duration } = request.all()
-        const user = auth.getUser()
         
         try{
-            if(user.role != "admin"){
-                throw "Error"
-            }
             let course = await Course.findOrFail(params.id)
             course.type = type
             course.name = name
