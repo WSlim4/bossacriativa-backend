@@ -42,6 +42,6 @@ const Factory = use('Factory')
             theme_color: "pink"
         }
     
-    })
+    })*/
 
 
