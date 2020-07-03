@@ -1,1 +1,1 @@
-web: ENV_SILENT=true npm star
+web: ENV_SILENT=true npm start
