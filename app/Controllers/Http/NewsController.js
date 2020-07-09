@@ -16,10 +16,11 @@ class NewsController {
         return news
     }
     async edit({ request, params }){
-        const { title, description, img_url } = request.all()
+        const { title, description, img_url, introduction } = request.all()
         const news = await News.findOrFail(params.id)
             news.title = title,
             news.description = description,
+            news.introduction = introduction,
             news.img_url = img_url
             news.save()
         
